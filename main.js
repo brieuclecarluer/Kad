@@ -2,7 +2,14 @@ import { ObjectGame } from './unit.js';
 import { Player } from './player.js';
 import { Unit } from './unit.js';
 
-let gridSize = 5;
+
+const url = map.tmj;
+async function chargerMap(url) {
+    const res = await fetch(url);
+    const data = await res.json();
+    return data
+}
+
 let listobject1 = [];
 let listobject2 = [];
 
